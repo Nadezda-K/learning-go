@@ -1,5 +1,6 @@
 #!/bin/sh
 
-cat $PWD/theDirectory/left/down/beginning/README
-echo $(pwd)/theDirectory/left/down/beginning
+cd $PWD/theDirectory/left/down/beginning/
+cat README
+pwd
 
