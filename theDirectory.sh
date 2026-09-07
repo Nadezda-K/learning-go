@@ -1,4 +1,4 @@
 #!/bin/sh
 
-cat $PWD/sprint/theDirectory/left/down/beginning/README
+cat $PWD/theDirectory/left/down/beginning/README
 pwd
