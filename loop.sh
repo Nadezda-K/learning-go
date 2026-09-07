@@ -6,8 +6,6 @@ if [ $loops_number -gt 100 ]; then
     loops_number=100
 fi
 
-echo $loops_number
-
 count_itr=1
 while [ $count_itr -le $loops_number ]; do
     echo "This is loop number ${count_itr}"
