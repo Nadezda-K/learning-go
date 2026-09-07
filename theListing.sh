@@ -1,4 +1,4 @@
 #!/bin/sh
 
-ls -A -lt -u
+ls -A --time=u
 
