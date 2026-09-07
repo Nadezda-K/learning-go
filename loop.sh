@@ -2,7 +2,7 @@
 
 loops_number=$1
 
-if [[ $loops_number -gt 100 ]]; then
+if [ $loops_number -gt 100 ]; then
     $loops_number=100
 fi
 
