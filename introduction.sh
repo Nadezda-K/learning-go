@@ -1,4 +1,4 @@
 #!/bin/sh
 # Hello world script
 
-echo "Hello world!"
+echo "Hello World!"
