@@ -1,4 +1,4 @@
 #!/bin/sh
 
-cat README
+cat /home/k-nkorepa/sprint/theDirectory/left/down/beginning/README
 pwd
