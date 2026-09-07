@@ -1,4 +1,4 @@
 #!/bin/sh
 
-ls -A --time=u -F
+ls -F --time=u --format=commas
 
