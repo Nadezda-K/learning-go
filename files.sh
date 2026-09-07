@@ -11,7 +11,7 @@ cp \! \`
 
 echo $MOVE_A
 if [ "$MOVE_A" = "yes" ]; then
-    cp a \`
+    mv a \`
 elif [ "$MOVE_A" = "no" ]; then
     rm a
 else
