@@ -1,14 +1,14 @@
 package sprint
 
 func TimeConverter(time int) {
-   time := 7384
    sec := time%60
    hour := int(time/3600)
    time = time - (3600 * hour)
    min := int(time/60)
    
-   time_list := [3]int{hour, min, sec}
-   return time_list
+   //time_list := [3]int{hour, min, sec}
+   //return time_list
+   return hour, min, sec
 }
 
 
