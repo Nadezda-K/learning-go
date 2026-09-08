@@ -1,8 +1,8 @@
 package sprint
 
 func RuneChecksum(a, b rune) rune {
-   my_int1 := int(my_rune1) - int('a') + 1
-   my_int2 := int(my_rune2) - int('a') + 1
+   my_int1 := int(a) - int('a') + 1
+   my_int2 := int(b) - int('a') + 1
    new_int := (my_int1 * my_int2) % 26
    
    return rune(new_int)
