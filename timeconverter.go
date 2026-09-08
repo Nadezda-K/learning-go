@@ -6,8 +6,9 @@ func TimeConverter(time int) {
    hour := int(time/3600)
    time = time - (3600 * hour)
    min := int(time/60)
-   return int(hour), int(min, int(sec)
-
+   
+   time_list := [3]int{hour, min, sec}
+   return time_list
 }
 
 
