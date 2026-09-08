@@ -3,5 +3,6 @@ package sprint
 import "math"
 
 func Casting(n float64) int {
-    return math.Round(n)
+    c := n%1
+    return n-c
 }
