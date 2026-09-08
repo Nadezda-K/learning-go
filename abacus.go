@@ -1,9 +1,4 @@
-package main
-
-import (
-    "fmt"
-    "os"
-)
+package sprint
 
 func Abacus(a int, b int) int {
     return a / b
