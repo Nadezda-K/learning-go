@@ -13,4 +13,6 @@ func Season(month string) string {
                 str = "autumn"
           default:
                 str = "invalid input: " + month
+     }
+    return str
 }
