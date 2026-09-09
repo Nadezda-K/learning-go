@@ -1,8 +1,8 @@
 package sprint
 
 func Accumulate(n int) int {
+    acc := int(0)
     if ( n >= 0 ) {
-       acc := int(0)
        for i:=0; i<=n; i++ {
            acc = acc + i
        }
