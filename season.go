@@ -1,8 +1,8 @@
 package sprint
 
 func Season(month string) string {
-    str := "initializing"
-    switch {
+    var str string
+    switch month {
           case "jan", "feb", "dec":
                 str = "winter"
           case "mar", "apr", "may":
