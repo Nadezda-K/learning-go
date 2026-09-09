@@ -1,7 +1,7 @@
 package sprint
 
 func IntVsFloat(i int, f float32) string {
-   i2f := float(i)
+   i2f := float32(i)
    if ( i2f > f ) {
        str := "Integer"
    }
