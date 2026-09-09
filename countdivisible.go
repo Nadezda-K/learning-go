@@ -13,4 +13,5 @@ func CountDivisible(from, to, step, divisor int) int {
             }
         }
     }
+    return int(count)
 }
