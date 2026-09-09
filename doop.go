@@ -14,7 +14,7 @@ func Doop(a int, op string, b int) int {
         case "*":
             return a * b
         case "%" :
-            if ( b == 0 ): {
+            if ( b == 0 ) {
               return 0
             }
             return a % b
