@@ -21,7 +21,7 @@ func AlphaNumber(n int) string {
         str = string(rune(digit+97)) + str
     }
 
-    if ( n <= 0 ) {
+    if ( n < 0 ) {
         str = string(rune(45)) + str // rune(45) is a minus sign
     }
 
