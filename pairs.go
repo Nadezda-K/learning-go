@@ -1,6 +1,6 @@
 package sprint
 
-imprt "fmt"
+import "fmt"
 
 func Pairs() string {
     str := ""
