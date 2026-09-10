@@ -1,10 +1,10 @@
 package sprint
 
 func IsPrime(n int) bool {
-    if ( n <= 2) {
+    if ( n <= 1) {
         return false
     }
-    for i:=3; i<n; i++ {
+    for i:=2; i<n; i++ {
        if ( n%i == 0) {
            return false
        }
