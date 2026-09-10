@@ -7,6 +7,6 @@ func FindDividend(from, to, divisor int) int {
           x = i
           return x
        }
-       
+    }
     return x
 }
