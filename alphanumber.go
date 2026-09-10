@@ -15,12 +15,15 @@ func AlphaNumber(n int) string {
         //fmt.Println(number)
     }
     
-    for number >= 0 {
+    for number > 0 {
         digit = number%10
         number = number/10
         str = string(rune(digit+97)) + str
     }
-
+    
+    if ( n == 0 ) {
+        str = "a"
+    }
     if ( n < 0 ) {
         str = string(rune(45)) + str // rune(45) is a minus sign
     }
