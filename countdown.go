@@ -1,6 +1,6 @@
 package sprint
 
-//import "fmt"
+import "fmt"
 
 func Countdown(n int) string {
     str := ""
