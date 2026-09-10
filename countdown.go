@@ -1,6 +1,8 @@
 package sprint
 
-func Countdown(n int) {
+//import "fmt"
+
+func Countdown(n int) string {
     str := ""
     for i:=n; i>0; i-=2 {
         str += i + ", "
