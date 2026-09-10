@@ -5,7 +5,7 @@ package sprint
 
 func AlphaNumber(n int) string {
 //func main() {
-    n:= -1280
+//    n:= -1280
     number := n
     str := ""
     var digit int
