@@ -12,7 +12,7 @@ func AlphaNumber(n int) string {
 
     if ( n <= 0 ) {
         number = 0 - number
-        fmt.Println(number)
+        //fmt.Println(number)
     }
     
     for number > 0 {
