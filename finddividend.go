@@ -5,7 +5,7 @@ func FindDividend(from, to, divisor int) int {
     for  i:=from; i<to; i++ {
        if (i%divisor == 0) {
           x = i
-          reurn x
+          return x
        }
        
     return x
