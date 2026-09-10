@@ -9,7 +9,7 @@ func Fibonacci(n int) int {
     }
     
     ni2 := int(0)
-    ni1 : int(1)
+    ni1 := int(1)
     var ni int
 
     for i:=2; i<=n; i++ {
