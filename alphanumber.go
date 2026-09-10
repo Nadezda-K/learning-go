@@ -15,7 +15,7 @@ func AlphaNumber(n int) string {
         //fmt.Println(number)
     }
     
-    for number > 0 {
+    for number >= 0 {
         digit = number%10
         number = number/10
         str = string(rune(digit+97)) + str
