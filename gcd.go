@@ -10,7 +10,7 @@ func GCD(a, b int) int {
         a,b = b,a // swap values
     }
     
-    if ( a == 0 ) && ( b == 0 ) { 
+    if ( a == 0 ) || ( b == 0 ) { 
         return b
     }
     
