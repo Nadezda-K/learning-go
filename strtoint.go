@@ -9,7 +9,6 @@ func StrToInt(s string) int {
     beginning_is_zero := true
 
     for i:=0; i<len(s); i++ {
-        fmt.Println( s[i], string(s[i]) )
         if ( rune(s[i]) < rune('0') ) || ( rune(s[i]) > rune('9') ) {
             if ( i == 0 ) && ( rune(s[i]) == 43 ){
                 sign = 1
