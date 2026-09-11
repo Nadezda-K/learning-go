@@ -11,7 +11,7 @@ func GCD(a, b int) int {
     }
     
     if ( a == 0 ) && ( b == 0 ) { 
-        gcd = b 
+        return b
     }
     
     for i:=a; i>0; i-- {
