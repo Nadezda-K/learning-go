@@ -4,12 +4,16 @@ package sprint
 //import "fmt"
 
 func GCD(a, b int) int {
-    gcd := 1
-
+    var gcd int
+    
     if ( a > b) {
         a,b = b,a // swap values
     }
-
+    
+    if ( a == 0 ) && ( b == 0 ) { 
+        gcd = b 
+    }
+    
     for i:=a; i>0; i-- {
         if ( b%i == 0 ) && ( a%i == 0 ) {
             gcd = i
