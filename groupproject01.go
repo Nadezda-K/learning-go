@@ -42,7 +42,7 @@ func input_cypher() int {
     fmt.Println("3. Optional")
     
     fmt.Scan(&c)
-    if ( op != 1 ) && ( op != 2 ) && ( op != 3 ){
+    if ( c != 1 ) && ( c != 2 ) && ( c != 3 ){
         fmt.Println("\n Incorrect input. Please choose 1, or 2, or 3 .\n")
         input_cypher()
     }
@@ -60,15 +60,10 @@ func main() {
 
     fmt.Println("is_encryption", is_encryption)
 
-
     // User input. Choose encription algorithm
-//    var cypher int
-//    fmt.Println("Select cypher (1/2/3):")
-//    fmt.Println("1. ROT13.")
-//    fmt.Println("2. Reverse.")
-//    fmt.Println("3. Optional")
+    cypher := input_cypher()
     
-    fmt.Scan(&cypher)
+    fmt.Println("cypher algorithm", cypher)
 
     // User input. Meassage
     var message string
