@@ -33,6 +33,7 @@ func input_operation() bool {
     return bool_op
 }
 
+
 func input_cypher() string {
     // User input. Choose encription algorithm
     var c int
@@ -59,38 +60,36 @@ func input_cypher() string {
     return str_c
 }
 
+// Get the input data required for the operation
+func getInput() (toEncrypt bool, encoding string, message string) {
+    // User input. Define encrypt or decrypt operation
+    toEncrypt = input_operation()
+    fmt.Println("is_encryption", toEncrypt)
+
+    // User input. Choose encription algorithm
+    encoding = input_cypher()
+    fmt.Println("cypher algorithm", encoding)
+
+    // User input. Meassage
+    fmt.Println("Enter the message:")
+    fmt.Scan(&message)
+
+    fmt.Printf("\nis_encryption =  %v\n cypher %v\n message %v \n", toEncrypt, encoding, message)
+    
+    return toEncrypt, encoding, message
+}
+
+
 
 
 
 func main() {
     fmt.Println("Welcome to the Cypher Tool!\n")
 
-    // User input. Define encrypt or decrypt operation
-    is_encryption := input_operation()
-    fmt.Println("is_encryption", is_encryption)
+    // Get the input data required for the operation
+    is_encryption, cypher, message := getInput()
 
-    // User input. Choose encription algorithm
-    cypher := input_cypher()
-    fmt.Println("cypher algorithm", cypher)
-
-    // User input. Meassage
-    var message string
-    fmt.Println("Enter the message:")
+    fmt.Printf("In main : is_encryption =  %v\n cypher %v\n message %v \n", is_encryption, cypher, message)
     
-    fmt.Scan(&message)
-
-
-
-
-
-//    switch operation {
-//        case 1 :
-//             str_operation := "Encrypted"
-//        case 2 :
-//             str_operation := "Dencrypted"
-//    }
-
-//    fmt.Printf("You choose operation %02d and cypher %02d \n", operation, cypher)
-//    fmt.Printf("Decrypted message using reverse%v:\n", returned_message)
 
 }
