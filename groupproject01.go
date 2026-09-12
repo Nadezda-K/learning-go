@@ -25,7 +25,7 @@ func input_operation() bool {
 
     var bool_op bool
     if ( op == 1 ) {
-        bool_op = true 
+        bool_op = true
     }
     if ( op == 2 ) {
         bool_op = false
@@ -33,7 +33,7 @@ func input_operation() bool {
     return bool_op
 }
 
-func input_cypher() int {
+func input_cypher() string {
     // User input. Choose encription algorithm
     var c int
     fmt.Println("Select cypher (1/2/3):")
@@ -46,7 +46,17 @@ func input_cypher() int {
         fmt.Println("\n Incorrect input. Please choose 1, or 2, or 3 .\n")
         input_cypher()
     }
-    return c
+
+    var str_c string
+    switch c {
+        case 1 :
+            str_c = "ROT13"
+        case 2 :
+            str_c = "Reverse"
+        case 3 :
+            str_c = "Optional"
+    }
+    return str_c
 }
 
 
@@ -57,17 +67,15 @@ func main() {
 
     // User input. Define encrypt or decrypt operation
     is_encryption := input_operation()
-
     fmt.Println("is_encryption", is_encryption)
 
     // User input. Choose encription algorithm
     cypher := input_cypher()
-    
     fmt.Println("cypher algorithm", cypher)
 
     // User input. Meassage
     var message string
-    fmt.Println("Enter the message::")
+    fmt.Println("Enter the message:")
     
     fmt.Scan(&message)
 
