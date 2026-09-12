@@ -83,6 +83,8 @@ func getInput() (toEncrypt bool, encoding string, message string) {
     return toEncrypt, encoding, message
 }
 
+
+//check if charactes is a letter
 func is_letter(r rune) bool {
     // Checking if rune is a letter
     if ( r > rune('a') && r < rune('z') ) || ( r > rune('A') && r < rune('Z') ) {
@@ -91,8 +93,16 @@ func is_letter(r rune) bool {
     return false
 }
 
+// function to shit letters
 func ShiftBy(r rune, step int) string {
-    return string((int(r) - int('a') + step) % 26 + int('a'))
+    var starting_letter int
+    if ( r > rune('a') && r < rune('z') ) {
+        starting_letter = int('a')
+    }
+    if ( r > rune('A') && r < rune('Z') ) {
+        starting_letter = int('A')
+    }
+    return string((int(r) - starting_letter + step) % 26 + starting_letter)
 }
 
 
@@ -100,9 +110,14 @@ func ShiftBy(r rune, step int) string {
 // Encrypt the message with rot13
 func encrypt_rot13(s string) string {
     str := ""
-    for i, v := range s {
-        str += ShiftBy(rune(v), 13)
-        fmt.Println(i, v, )
+    var letter bool
+    for _, v := range s {
+        letter = is_letter(v)
+        if letter {
+            str += ShiftBy(v, 13)
+        } else {
+            str += string(v)
+        }
     }
     return str
 }
@@ -124,7 +139,7 @@ func main() {
 
     // Get the input data required for the operation
     is_encryption, cypher, message := getInput()
-    is_encryption, cypher, message = true, "rot13", "Hello, World! 1234"
+    is_encryption, cypher, message = true, "rot13", "Hello, World! 1234? hELLO. wORLD&"
 
     fmt.Printf("In main : is_encryption =  %v\n cypher %v\n message %v \n", is_encryption, cypher, message)
     
