@@ -59,9 +59,9 @@ func input_cypher() string {
         case "1" :
             str_c = "rot13"
         case "2" :
-            str_c = "Reverse"
+            str_c = "reverse"
         case "3" :
-            str_c = "Optional"
+            str_c = "optional"
     }
     return str_c
 }
@@ -95,14 +95,24 @@ func is_letter(r rune) bool {
 
 // function to shit letters
 func ShiftBy(r rune, step int) string {
-    var starting_letter int
     if ( r > rune('a') && r < rune('z') ) {
-        starting_letter = int('a')
+        return string((int(r) - int('a') + step) % 26 + int('a'))
     }
     if ( r > rune('A') && r < rune('Z') ) {
-        starting_letter = int('A')
+        return string((int(r) - int('A') + step) % 26 + int('A'))
     }
-    return string((int(r) - starting_letter + step) % 26 + starting_letter)
+    return "0"
+}
+
+// return reverse alphabet value
+func ReverseAlphabetValue(r rune) string {
+    if ( r > rune('a') && r < rune('z') ) {
+        return string( int('z')-(int(r)-int('a')) )
+    }
+    if ( r > rune('A') && r < rune('Z') ) {
+        return string( int('Z')-(int(r)-int('A')) )
+    }
+    return "0"
 }
 
 
@@ -123,11 +133,25 @@ func encrypt_rot13(s string) string {
 }
 
 // Encrypt the message with reverse
-//func encrypt_reverse(s string) string {}
+func encrypt_reverse(s string) string {
+    str := ""
+    var letter bool
+    for _, v := range s {
+        letter = is_letter(v)
+        if letter {
+            str += ReverseAlphabetValue(v)
+        } else {
+            str += string(v)
+        }
+    }
+    return str
+
+
+}
 
 // Decrypt the message with rot13
 // ?? Do we rally need it it exactly the same as encrypt_rot13 ??
-func decrypt_rot13(s string) string {
+/*func decrypt_rot13(s string) string {
     str := ""
     var letter bool
     for _, v := range s {
@@ -139,7 +163,7 @@ func decrypt_rot13(s string) string {
         }
     }
     return str
-}
+}*/
 
 // Decrypt the message with reverse
 //func decrypt_reverse(s string) string {}
@@ -153,27 +177,26 @@ func main() {
     // Get the input data required for the operation
     is_encryption, cypher, message := getInput()
     //is_encryption, cypher, message = true, "rot13", "Hello, World! 1234? hELLO. wORLD&"
-    is_encryption, cypher, message = false, "rot13", "Uryyb, Jbeyq! 1234? uRYYB. jBEYQ&"
+    //is_encryption, cypher, message = false, "rot13", "Uryyb, Jbeyq! 1234? uRYYB. jBEYQ&"
+    //is_encryption, cypher, message = true, "reverse", "Hello, World! 1234? hELLO. wORLD&"
+    is_encryption, cypher, message = false, "reverse", "Svool, Dliow! 1234? sVOOL. dLIOW&"
     fmt.Printf("In main : is_encryption =  %v\n cypher %v\n message %v \n", is_encryption, cypher, message)
     
     var str_result string
 
     switch cypher {
     case "rot13" :
+        str_result = encrypt_rot13(message)
+        /*
         if is_encryption {
             str_result = encrypt_rot13(message)
         }
         if !is_encryption {
             str_result = decrypt_rot13(message)
-        }
-//    case "Reverse" :
-//        if is_encryption {
-//            encrypt_reverse(message)
-//        }
-//        if !is_encryption {
-//            decrypt_reverse(message)
-//        }
-    //case "Optional":
+        }*/
+    case "reverse" :
+        str_result = encrypt_reverse(message)
+    //case "optional":
 
     }
 
