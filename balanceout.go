@@ -15,7 +15,6 @@ func BalanceOut(arr []bool) []bool {
             count_f++
         }        
     }
-    fmt.Println(count_t, count_f)
     if count_f > count_t {
         for i:=count_t; i<count_f; i++ {
             arr = append(arr, true )
