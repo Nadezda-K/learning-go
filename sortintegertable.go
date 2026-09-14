@@ -7,9 +7,7 @@ func SortIntegerTable(table []int) []int {
     for i:=0; i<len(table); i++ {
         for j:=0; j<len(table)-i-1; j++ {
             if table[j] > table[j+1] {
-                //table = append(table[:j], table[j:]...)
                 table[j], table[j+1] = table[j+1], table[j]
-                fmt.Println(table[i], table[j])
             }
         }        
         fmt.Println(table)
