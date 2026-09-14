@@ -7,7 +7,7 @@ func BalanceOut(arr []bool) []bool {
     //var slice []bool
     count_t := 0
     count_f := 0
-    for i,v := range arr {
+    for _,v := range arr {
         if v {
             count_t++
         } else {
