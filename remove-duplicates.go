@@ -1,8 +1,8 @@
-//package sprint
+package sprint
 
-package main
+//package main
 
-import "fmt"
+//import "fmt"
 
 
 func RemoveDuplicates(arr []int) []int {
@@ -32,8 +32,9 @@ func RemoveDuplicates(arr []int) []int {
 
 
 
-
+/*
 func main() {
 	s := RemoveDuplicates([]int{1, 2, 3, 2, 4, 8, 8, 1, 2, 0, 8})
 	fmt.Println(s)
 }
+*/
