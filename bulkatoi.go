@@ -1,7 +1,7 @@
-//package sprint
+package sprint
 
-package main
-import "fmt"
+//package main
+//import "fmt"
 
 func StrToInt(s string) int {
     result := int(0)
@@ -40,9 +40,10 @@ func BulkAtoi(arr []string) []int {
 	return bulk
 }
 
-
+/*
 func main(){
     s := BulkAtoi([]string{"8", "kood", "-13"})
     fmt.Println(s)
 
 }
+*/
