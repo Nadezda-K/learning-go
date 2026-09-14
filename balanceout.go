@@ -8,7 +8,6 @@ func BalanceOut(arr []bool) []bool {
     count_t := 0
     count_f := 0
     for i,v := range arr {
-        fmt.Println(i, v)
         if v {
             count_t++
         } else {
