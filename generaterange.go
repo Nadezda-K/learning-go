@@ -1,7 +1,7 @@
-//package sprint
+package sprint
 
-package main
-import "fmt"
+//package main
+//import "fmt"
 
 func GenerateRange(min, max int) []int {
     var slice []int
@@ -15,6 +15,7 @@ func GenerateRange(min, max int) []int {
     return slice
 }
 
+/*
 func main(){
     s := GenerateRange(3,-9) 
     fmt.Println(s, len(s), cap(s))
@@ -22,3 +23,4 @@ func main(){
 		fmt.Println("nil!")
 	}
 }
+*/
