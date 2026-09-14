@@ -10,7 +10,6 @@ func SortIntegerTable(table []int) []int {
                 table[j], table[j+1] = table[j+1], table[j]
             }
         }        
-        fmt.Println(table)
     }    
     return table 
 }
