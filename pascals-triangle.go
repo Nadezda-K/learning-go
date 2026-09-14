@@ -7,6 +7,10 @@ package sprint
 func PascalsTriangle(n int) [][]int {
 	var triangle [][]int
 
+	if n<=0 {
+		return triangle
+	}
+
 	row := []int{1}
 	triangle = append(triangle, [][]int{row}...)
 
