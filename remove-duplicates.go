@@ -9,7 +9,7 @@ func RemoveDuplicates(arr []int) []int {
 	var new []int
 	var check bool
 	
-	if arr == nil {
+	if len(arr) == 0 {
 		return new
 	}
 	
