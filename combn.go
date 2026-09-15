@@ -7,24 +7,30 @@ import "fmt"
 func CombN(n int) []string {
 	var result []string
 
-    var MakeNumbers func(string, int)
-	MakeNumbers = func(number string, start int) {
-		if len(number) == n {
-			result = append(result, number)
+	var Recursive func(int, string)
+	Recursive = func(start int, str string) {
+		if len(str) == n {
+			result = append(result, str)
+			//str = ""
 			return
 		}
+
 		for i:=start; i<=9; i++ {
-			MakeNumbers(number + string('0'+i), i+1)
+			fmt.Println(str)
+			Recursive( i+1, str + string('0' + i) )
 		}
+
 	}
 
-	MakeNumbers("", 0)
+	Recursive(0, "")
+
 	return result
 }
 
 
 func main(){
-    s := CombN(4)
+    s := CombN(5)
     fmt.Println(s)
 
 }
+
