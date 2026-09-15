@@ -5,7 +5,7 @@ package sprint
 //import "fmt"
 
 func StrLength(s string) []int  {
-	return []int{ len([]rune{s}), len(s)}
+	return []int{ len([]rune(s)), len(s)}
 }
 
 /*
