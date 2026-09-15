@@ -5,7 +5,7 @@ package sprint
 //import "fmt"
 
 func NRune(s string, i int) rune  {
-	return rune(s[i-1])
+	return rune(s[i])
 }
 
 /*
