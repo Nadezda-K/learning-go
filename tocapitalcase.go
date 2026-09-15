@@ -11,7 +11,9 @@ func ToCapitalCase(s string) string {
 
 		//fmt.Println(previous_is_letter, string(v))
 
-		if (v < rune('a') || v > rune('z')) && (v < rune('A') || v > rune('Z')) {
+		if (v < rune('a') || v > rune('z')) && 
+			(v < rune('A') || v > rune('Z')) && 
+			(v < rune('0') || v > rune('9')) {
 			previous_is_letter = false
 		} else {
 			if v >= rune('a') && v <= rune('z') {
