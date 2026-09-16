@@ -19,8 +19,6 @@ func StrSplitBy(s, sep string) []string {
 		window := s[i:j]
 		fmt.Println(window)
 		if window == sep {
-			fmt.Println("Find sep:", window, i,j)
-			fmt.Println("Word was:", s[pos-1:i])
 			arr = append(arr, s[pos-1:i])
 			pos = j+1
 		}		
