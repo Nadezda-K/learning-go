@@ -6,7 +6,7 @@ package sprint
 
 func SubstrIndex(s string, toFind string) int {
 	if s == "" {
-		return 0
+		return -1
 	}
 	if toFind== "" {
 		return -1
