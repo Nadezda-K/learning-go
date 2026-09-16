@@ -1,7 +1,7 @@
-//package sprint
+package sprint
 
-package main
-import "fmt"
+//package main
+//import "fmt"
 
 
 func NbrBase(n int, base string) string {	
