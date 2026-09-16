@@ -5,10 +5,10 @@ package sprint
 //import "fmt"
 
 func SubstrIndex(s string, toFind string) int {
-	if toFind== "" {
-		return -1
-	}
 	if s == "" {
+		return 
+	}
+	if toFind== "" {
 		return -1
 	}
 
