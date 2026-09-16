@@ -2,7 +2,7 @@
 
 package main
 import (
-		"fmt"
+//		"fmt"
 		"math"
 		"strings"
 )
@@ -149,8 +149,8 @@ func ValidNumber(nbr string, base string) bool {
 //--------------------------------------------
 //   MAIN
 //--------------------------------------------
-func main() {
+/*func main() {
 	var s string
 	s = ConvertAnyToAny("100001", "01", "0123456789")
 	fmt.Println(s)
-}
+}*/
