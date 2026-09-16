@@ -17,7 +17,6 @@ func StrSplitBy(s, sep string) []string {
 	for i,j :=0, len(sep); j <= len(s); i,j = i+1, j+1 {// i=0, j=size (=3 for "YOU");  
 														// i= i+1, j=j+1
 		window := s[i:j]
-		fmt.Println(window)
 		if window == sep {
 			arr = append(arr, s[pos-1:i])
 			pos = j+1
