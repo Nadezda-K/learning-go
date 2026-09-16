@@ -25,7 +25,7 @@ func ConvertAnyToAny(nbr, baseFrom, baseTo string) string {
 
 	//check number is valid
 	// if ValidNumber return false, then return 0
-	is_number = ValidNumber(nbr, baseFrom)
+	is_number := ValidNumber(nbr, baseFrom)
 	if !is_number {
 		return "NV"
 	}
