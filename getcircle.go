@@ -12,7 +12,7 @@ type Circle struct {
 
 func GetCircle(r float32) Circle {
 	var c Circle
-	pi := 3.14
+	pi := float32(3.14)
 	c.Radius = r 
 	c.Diameter = 2 * r
 	c.Area = pi * r *r
