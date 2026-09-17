@@ -1,7 +1,7 @@
 package sprint
 
-//package main
-//import "fmt"
+package main
+import "fmt"
 
 type Student struct {
 	Name string
@@ -23,6 +23,11 @@ func Mean(scores []int) float32 {
 func TopStudent(students []Student) Student {
 	top_index := int(0)
 	top_score := float32(0)
+	var s Student
+
+	if len(students) == 0 {
+		return s
+	}
 
 	for i, v := range students {
 		student_score := Mean(v.Grades)
@@ -31,10 +36,11 @@ func TopStudent(students []Student) Student {
 			top_index = i
 		}
 	}
+
 	return students[top_index]
 }
 
-/*
+
 func main() {
     //var s []Student
 	students := []Student{
@@ -46,4 +52,4 @@ func main() {
 
 	fmt.Println([]Student{})
 }
-*/
+
