@@ -1,7 +1,7 @@
 package sprint
 
-package main
-import "fmt"
+//package main
+//import "fmt"
 
 type Student struct {
 	Name string
@@ -40,7 +40,7 @@ func TopStudent(students []Student) Student {
 	return students[top_index]
 }
 
-
+/*
 func main() {
     //var s []Student
 	students := []Student{
@@ -52,4 +52,4 @@ func main() {
 
 	fmt.Println([]Student{})
 }
-
+*/
