@@ -18,7 +18,7 @@ func STotal(score []int) int {
 	return sum
 }
 func GetWinner(c1, c2 Contestant) string {
-	if Total(c1.Score) > Total(c2.Score) {
+	if Total(c1.Scores) > Total(c2.Scores) {
 		return c1.Name
 	} else {
 		return c2.Name
