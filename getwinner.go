@@ -8,7 +8,7 @@ type Contestant struct {
 	Scores []int
 }
 
-func STotal(score []int) int {
+func Total(score []int) int {
 	sum := int(0)
 
 	for _, v := range score {
