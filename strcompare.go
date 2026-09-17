@@ -1,8 +1,8 @@
-package sprint
+//package sprint
 
-//package main
-//
-//import "fmt"
+package main
+
+import "fmt"
 
 func StrCompare(a, b string) int {
 	var str []rune
@@ -25,16 +25,23 @@ func StrCompare(a, b string) int {
 
 	if len(a_rune) > len(b_rune) {
 		return 1
+	} else if len(a_rune) < len(b_rune) {
+		return -1
 	} else {
 		return 0
 	}
 }
 
-/*
+
 func main() {
-	//s := StrCompare("Hi!", "Hi!")
-	//s := StrCompare("Day", "ay")
-	s := StrCompare("weekday", "week")
+        var s int
+	s = StrCompare("Hi!", "Hi!")
+	fmt.Println(s)
+        s = StrCompare("Day", "ay")
+	fmt.Println(s)
+        s = StrCompare("weekday", "week")
+	fmt.Println(s)
+	s = StrCompare("week", "weekday")
 	fmt.Println(s)
 }
-	*/
+
