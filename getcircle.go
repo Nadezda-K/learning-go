@@ -20,7 +20,7 @@ func GetCircle(r float32) Circle {
 }
 
 /*
-func main() {
+//func main() {
     var s Circle
 	s = GetCircle(5)
 
