@@ -21,6 +21,8 @@ func GetRectangle(min, max Coords) Rectangle {
 	r.Height = max.Y -min.Y
 	r.Area = r.Width * r.Height
 	r.Perimeter = 2 * (r.Width + r.Height)
+
+	return r
 }
 
 /*
