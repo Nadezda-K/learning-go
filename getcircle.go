@@ -17,6 +17,8 @@ func GetCircle(r float32) Circle {
 	c.Diameter = 2 * r
 	c.Area = pi * r *r
 	c.Perimeter = 2 *pi * r
+
+	return c
 }
 
 /*
