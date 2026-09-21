@@ -16,7 +16,7 @@ func FactorialRecursive(n int) int {
 	// Find biggest possible int
 	maxInt := int(^uint(0) >> 1)
 
-    result := n * FactorialIterative(n-1) // solution by recursive function
+    result := n * FactorialRecursive((n-1) // solution by recursive function
 
     if result > maxInt/n {
         return 0
