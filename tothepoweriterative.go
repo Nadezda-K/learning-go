@@ -15,7 +15,7 @@ func ToThePowerIterative(n int, power int) int  {
 
     result := n 
     for power > 1 {
-        result *= result
+        result = result * n
         power--
     }
 
