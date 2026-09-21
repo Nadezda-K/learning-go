@@ -1,7 +1,7 @@
-//package sprint
+package sprint
 
-package main
-import "fmt"
+// package main
+// import "fmt"
 
 
 func FactorialIterative(n int) int {
@@ -25,6 +25,6 @@ func FactorialIterative(n int) int {
     return result
 }
 
-func main() {
-	fmt.Println( FactorialIterative(21) )
-}
+// func main() {
+// 	fmt.Println( FactorialIterative(21) )
+// }
