@@ -4,7 +4,7 @@ package sprint
 // import "fmt"
 
 
-func ToThePowerIterative(n int, power int) int  {
+func ToThePowerRecursive(n int, power int) int  {
 	if n < 0 {
 		return 0
 	}
@@ -12,11 +12,11 @@ func ToThePowerIterative(n int, power int) int  {
 		return 1
 	}
 
-    result := n * ToThePowerIterative(n, power-1)
+    result := n * ToThePowerRecursive(n, power-1)
 
     return result
 }
 
 // func main() {
-// 	fmt.Println( ToThePowerIterative(2, 6) )
+// 	fmt.Println( ToThePowerRecursive(2, 6) )
 // }
